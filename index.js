@@ -4,9 +4,11 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const { User } = require('./models/user');
 
+const config = require('./config/key');
+
 const app = express();
 
-mongoose.connect('mongodb+srv://Djdaan:abc1234@react-blog.g9qch.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+mongoose.connect(config.mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
@@ -19,7 +21,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.get('/', (req, res)=> {
-    res.send('hello world');
+    res.send('hello hihihihih');
 });
 
 app.post('/api/users/register', (req, res) => {
