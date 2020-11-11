@@ -1,8 +1,8 @@
 
-// export default function( state={}, action){
+export default function( state={}, action){
 
-//     switch(action, types){
-//         default:
-//             return state;
-//     }
-// }
+    switch(action.type){
+        default:
+            return state;
+    }
+}
